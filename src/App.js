@@ -5,18 +5,21 @@ import Home from "./pages/home/Home.jsx";
 import Login from "./pages/login/Login.jsx";
 import Profile from "./pages/profile/Profile.jsx";
 import Register from "./pages/register/Register.jsx";
+import "./style.scss"
 import {
   createBrowserRouter,
   Navigate,
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 function App() {
   const currentUser = true;
+  const { darkMode } = useContext(DarkModeContext);
   const Layout = () => {
     return (
-      <div>
+      <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <Navbar />
         <div style={{ display: "flex" }}>
           <LeftBar />

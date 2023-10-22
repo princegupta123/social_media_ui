@@ -1,13 +1,25 @@
+@import "../../style.scss";
+
 
 .rightBar {
+  @include themify($themes){
   flex: 3;
   position: sticky;
   top: 70px;
   height: calc(100vh - 70px);
   overflow: scroll;
+  background-color: themed("bgSoft");
     &::-webkit-scrollbar {
       display: none;
     }
+    @include mobile{
+      display: none;
+    }
+
+    @include tablet{
+      display: none;
+    }
+
 
     .container {
       padding: 20px;
@@ -55,6 +67,7 @@
 
             p {
               font-size: 10px;
+              color: themed("textColorSoft");
             }
 
             span {
@@ -62,6 +75,7 @@
               // color: themed("textColor");
               font-size: 14px;
               margin-right: 7px;
+              color: themed("textColor");
             }
   
           }
@@ -89,4 +103,4 @@
         }
       }
     }
-  }
+  }}

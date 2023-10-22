@@ -1,35 +1,12 @@
-import React from 'react'
+import Stories from "../../components/stories/Stories";
+import Posts from "../../components/posts/Posts";
+import "./home.scss"
 
 const Home = () => {
   return (
-    <div>
-      <h1>
-        hello
-      </h1>
-      <h1>
-        hello
-      </h1>
-      <h1>
-        hello
-      </h1>
-      <h1>
-        hello
-      </h1>
-      <h1>
-        hello
-      </h1>
-      <h1>
-        hello
-      </h1>
-      <h1>
-        hello
-      </h1>
-      <h1>
-        hello
-      </h1>
-      <h1>
-        hello
-      </h1>
+    <div className="home">
+     <Stories/>
+     <Posts/>
     </div>
   )
 }
